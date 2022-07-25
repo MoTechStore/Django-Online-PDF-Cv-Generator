@@ -1,0 +1,30 @@
+{% load static %}
+<title>Online Cv</title>
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'css/index.css' %}" rel="stylesheet">
+    
+    <nav class="navbar navbar-expand-md fixed-top" style="background-color: #014751;color: #30B8B4FF;height: 80px">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="true" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="container-fluid">
+                      <span><a href="{% url 'index' %}" class="navbar-brand"  style="color: #FFFF00; font-size: 35px;">Online Cv Generator</a></span>
+                      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                          <span class="navbar-toggler-icon"></span>
+                      </button>
+      
+                      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                          <div class="navbar-nav ml-auto">
+
+                            <a href="{% url 'index' %}" class="nav-item nav-link active"><button class="btn_link">Home</button></a>
+
+                            <a href="{% url 'login' %}" class="nav-item nav-link active"><button class="btn_link">Sign In</button></a>
+
+                              <a href="{% url 'reg_form' %}" class="nav-item nav-link active"><button class="btn_link">Sign Up</button></a>
+
+                          </div>
+                      </div>
+                  </div>
+</nav>
+    

@@ -1,0 +1,67 @@
+{% load static %}
+
+
+{% include 'core/navbar.html' %}
+
+<link href="{% static 'css/kye.css' %}" rel="stylesheet">
+    
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4"></div>
+
+            <div class="col-sm-3" style="padding-top: 120px;">
+
+                <div class="card">
+                <h2 class="text-primary text-center">Sign Up Here</h2>
+                 
+               <form method="POST" action="{% url 'reg' %}">
+                {% csrf_token %}
+                <div class="form-group">
+                    <input type="text" name="username" class="form-control"  required placeholder="Enter Username">
+                </div>
+
+
+                <div class="form-group">
+                  <input type="email" name="email" class="form-control"  required placeholder="Enter Email">
+              </div>
+
+                <div class="form-group">
+                    <input type="password" name="password" class="form-control"  required placeholder="Enter Password">
+                </div>
+
+                <div class="form-group">
+                    <button class="loginbtn">Sign Up</button>
+                </div>
+            </form>
+            </div>
+
+            <p class="register-link">Have an account? Please <a href="{% url 'login' %}"><button class="registerbtn">Sign In</button></a></p>
+
+
+             <br/>
+            {% if messages %}
+                {% for message in messages %}
+                    <a class="messages"> {{ message }}</a>
+                {% endfor %}
+            {% endif %}
+
+        </div>
+
+            <div class="col-sm-4"></div>
+        </div>
+    </div>
+
+
+        
+
+
+
+{% include 'core/footer.html' %}
+
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/popper.js' %}"></script>    
+<script src="{% static 'js/bootstrap.js' %}"></script> 
+
+      
